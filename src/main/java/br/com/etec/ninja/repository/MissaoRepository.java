@@ -6,10 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import br.com.etec.ninja.model.Missao;
 
-public interface MissaoRepository extends JpaRepository<Missao, Long>{
+public interface MissaoRepository extends JpaRepository<Missao, Long> {
 
-Missao findByNome(String nomeMissao);
-
-List<Missao> findByNomeContaining(String nomeMissao);
-
+    List<Missao> findByDificuldadeMissao(String dificuldadeMissao);
 }
